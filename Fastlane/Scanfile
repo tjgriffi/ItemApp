@@ -1,7 +1,7 @@
-workspace "ItemApp.xcodeproj/project.xcworkspace"
+workspace "ItemApp.xcodeproj"
 scheme "ItemApp"
 sdk "iphonesimulator"
-device "iPhone 11"
+device "iPhone 17"
 code_coverage true
 xcargs '-parallelizeTargets'
 prelaunch_simulator true
