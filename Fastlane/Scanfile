@@ -1,4 +1,4 @@
-workspace "ItemApp.xcodeproj"
+workspace "ItemApp.xcodeproj/project.xcworkspace"
 scheme "ItemApp"
 sdk "iphonesimulator"
 device "iPhone 17"
