@@ -6,16 +6,15 @@ on:
       - develop
   workflow_dispatch:
 
+ concurrency:
+          group:  ${{ github.token }}-${{ github.ref }}
+          cancel-in-progress: true
+
 jobs:
   test:
     runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.9.1
-        with:
-          access_token:  ${{ github.token }}
+      - uses: actions/checkout@v4
 
       - uses: maxim-lobanov/setup-xcode@v1
         with:
@@ -30,7 +29,7 @@ jobs:
         run: bundle install
 
       - name: Swift Packages Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         id: cache
         with:
           path: |
@@ -40,9 +39,9 @@ jobs:
           restore-keys: ${{ runner.os }}-deps-v1
           
       - name: Run Tests (No Cache)
-        if: steps.setup.outputs.cache-hit != 'true'
+        if: steps.cache.outputs.cache-hit != 'true'
         run: bundle exec fastlane unit_test
 
       - name: Run Tests (Cache)
-        if: steps.setup.outputs.cache-hit == 'true'
+        if: steps.cache.outputs.cache-hit == 'true'
         run: bundle exec fastlane unit_test skip_package_dependencies_resolution:true
