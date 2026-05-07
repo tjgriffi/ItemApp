@@ -6,9 +6,9 @@ on:
       - develop
   workflow_dispatch:
 
- concurrency:
-          group:  ${{ github.token }}-${{ github.ref }}
-          cancel-in-progress: true
+concurrency:
+  group:  ${{ github.token }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   test:
