@@ -34,7 +34,7 @@ jobs:
           -project ItemApp.xcodeproj
           -scheme ItemApp
           -sdk iphonesimulator
-          -destination 'platform=iOS Simulator,name=iPhone 16'
+          -destination 'platform=iOS Simulator,name=iPhone 17 pro'
           CODE_SIGN_IDENTITY=""
           CODE_SIGNING_REQUIRED=NO
           CODE_SIGNING_ALLOWED=NO
