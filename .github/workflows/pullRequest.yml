@@ -28,6 +28,16 @@ jobs:
 
       - name: List Project Schemes
         run: xcodebuild -list -project ItemApp.xcodeproj
+        
+      - name: Build App First
+        run: xcodebuild build
+          -project ItemApp.xcodeproj
+          -scheme ItemApp
+          -sdk iphonesimulator
+          -destination 'platform=iOS Simulator,name=iPhone 16'
+          CODE_SIGN_IDENTITY=""
+          CODE_SIGNING_REQUIRED=NO
+          CODE_SIGNING_ALLOWED=NO
 
       - uses: ruby/setup-ruby@v1
 
