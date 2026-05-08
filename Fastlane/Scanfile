@@ -3,6 +3,6 @@ scheme "ItemApp"
 sdk "iphonesimulator"
 device "iPhone 17"
 code_coverage true
-xcargs '-parallelizeTargets'
+xcargs "-parallelizeTargets CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO"
 prelaunch_simulator true
 derived_data_path "Build/"
