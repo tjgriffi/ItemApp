@@ -20,6 +20,15 @@ jobs:
         with:
           xcode-version: '26.1'
 
+      - name: Xcode Version
+        run: xcodebuild -version
+
+      - name: Available Simulators
+        run: xcrun simctl list devices available
+
+      - name: List Project Schemes
+        run: xcodebuild -list -project ItemApp.xcodeproj
+
       - uses: ruby/setup-ruby@v1
 
       - name: Install Bundler
