@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
-		DF45867F2FA001AF001478C1 /* PBXContainerItemProxy */ = {
+		DF4586892FA001AF001478C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DF4586692FA001AC001478C1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DF4586702FA001AC001478C1;
 			remoteInfo = ItemApp;
 		};
-		DF4586892FA001AF001478C1 /* PBXContainerItemProxy */ = {
+		DF77E1602FAEC027009E3E62 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DF4586692FA001AC001478C1 /* Project object */;
 			proxyType = 1;
@@ -128,7 +128,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				DF4586802FA001AF001478C1 /* PBXTargetDependency */,
+				DF77E1612FAEC027009E3E62 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				DF4586812FA001AF001478C1 /* ItemAppTests */,
@@ -256,15 +256,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DF4586802FA001AF001478C1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DF4586702FA001AC001478C1 /* ItemApp */;
-			targetProxy = DF45867F2FA001AF001478C1 /* PBXContainerItemProxy */;
-		};
 		DF45868A2FA001AF001478C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DF4586702FA001AC001478C1 /* ItemApp */;
 			targetProxy = DF4586892FA001AF001478C1 /* PBXContainerItemProxy */;
+		};
+		DF77E1612FAEC027009E3E62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF4586702FA001AC001478C1 /* ItemApp */;
+			targetProxy = DF77E1602FAEC027009E3E62 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

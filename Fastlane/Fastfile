@@ -5,29 +5,8 @@ platform :ios do
 
     desc 'Builds project and executes unit tests'
     lane :unit_test do |options|
-        # Step 1 — build everything including test targets
-        xcodebuild(
-            workspace: "ItemApp.xcodeproj/project.xcworkspace",
-            scheme: "ItemApp",
-            sdk: "iphonesimulator",
-            destination: "platform=iOS Simulator,name=iPhone 17",
-            build_settings: {
-                "CODE_SIGN_IDENTITY" => "",
-                "CODE_SIGNING_REQUIRED" => "NO",
-                "CODE_SIGNING_ALLOWED" => "NO"
-            },
-            xcargs: "build-for-testing"
-        )
-        
-        # Step 2 — run tests against what was just built
         scan(
-            workspace: "ItemApp.xcodeproj/project.xcworkspace",
-            scheme: "ItemApp",
-            sdk: "iphonesimulator",
-            device: "iPhone 17",
-            xcargs: "test-without-building CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO",
-            code_coverage: true,
-            derived_data_path: "Build/",
+            clean: true,
             skip_package_dependencies_resolution: options[:skip_package_dependencies_resolution]
         )
     end
