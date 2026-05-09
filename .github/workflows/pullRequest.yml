@@ -53,7 +53,6 @@ jobs:
         with:
           path: |
             Build/SourcePackages
-            Build/Build/Products
           key: ${{ runner.os }}-deps-v1-${{ hashFiles('ItemApp.xcodeproj/project.workspace/xcshareddata/swiftpm/Package.resolved')}}
           restore-keys: ${{ runner.os }}-deps-v1
           

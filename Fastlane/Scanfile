@@ -2,6 +2,7 @@ workspace "ItemApp.xcodeproj/project.xcworkspace"
 scheme "ItemApp"
 sdk "iphonesimulator"
 device "iPhone 17"
+clean true
 code_coverage true
 xcargs "-parallelizeTargets CODE_SIGN_IDENTITY='' CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO"
 prelaunch_simulator true
